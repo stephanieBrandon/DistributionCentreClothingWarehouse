@@ -2,23 +2,25 @@ package com.kovunov.cpan252.tekkenuserdashboard.controller;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import com.kovunov.cpan252.tekkenuserdashboard.model.DistributionCentre;
 import com.kovunov.cpan252.tekkenuserdashboard.model.Item;
 import com.kovunov.cpan252.tekkenuserdashboard.repository.DistributionCentreRepository;
 import com.kovunov.cpan252.tekkenuserdashboard.repository.ItemRepository;
 
-@RestController
-@RequestMapping("/api/distribution")
-public class DistributionCentreController {
+@Controller
 
+//@RequestMapping("/")
+@SessionAttributes("CentresDirectory")
+@RestController
+@RequestMapping(value = {"/api/distribution", "/centerList"})
+public class DistributionCentreController {
+    @Autowired
     private final DistributionCentreRepository dcRepository;
+    @Autowired
     private final ItemRepository itemRepository;
 
     public DistributionCentreController(DistributionCentreRepository dcRepository, ItemRepository itemRepository) {

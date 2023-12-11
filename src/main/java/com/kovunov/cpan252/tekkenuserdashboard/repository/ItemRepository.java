@@ -4,6 +4,8 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.kovunov.cpan252.tekkenuserdashboard.model.Item;
 
-public interface ItemRepository extends CrudRepository<Item, Integer> {
+import java.util.List;
 
+public interface ItemRepository extends CrudRepository<Item, Integer> {
+    List<Item> findByBrandAndName(Item.Brand brand, String name);
 }

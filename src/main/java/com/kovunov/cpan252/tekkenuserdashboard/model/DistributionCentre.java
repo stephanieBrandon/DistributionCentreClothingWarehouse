@@ -39,5 +39,8 @@ public class DistributionCentre {
     //This is to connect DistributionCentre to ClothesItem
     @OneToMany(mappedBy = "distributionCentre")
     private List<Item> items;
+    //method to add and remove items from the list of items in a distribution centre object ( refer to file itemStock in ass.1 cpan228)
+    public void add(Item item) {this.items.add(item);}
+    public void remove(Item item) {this.items.remove(item);}
 
 }

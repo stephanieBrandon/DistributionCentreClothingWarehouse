@@ -37,53 +37,6 @@
         class="d-flex flex-column bd-highlight justify-content-left align-items-left w-75 ms-5"
 >
 
-
-<!--    <form class="mt-3" method="post" th:object="${itemsByBrandDto}">-->
-<!--        <div class="mb-3">-->
-<!--            <label for="brand" class="form-label"-->
-<!--            >Brand:-->
-<!--            </label>-->
-<!--            &lt;!&ndash;By using th:field we "bind" item model java fields to html input that we will provide&ndash;&gt;-->
-<!--            <input-->
-<!--                    type="text"-->
-<!--                    class="form-control"-->
-<!--                    id="brand"-->
-<!--                    th:field="*{brand}"-->
-<!--                    aria-describedby="brandHelp"-->
-<!--            />-->
-<!--            <div id="brandHelp" class="form-text">-->
-<!--                Not a valid brand name-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="mb-3">-->
-<!--            <label for="yearOfCreation" class="form-label">Year: </label>-->
-<!--            <input-->
-<!--                    type="int"-->
-<!--                    id="yearOfCreation"-->
-<!--                    th:field="*{yearOfCreation}"-->
-<!--                    name="yearOfCreation"-->
-<!--            />-->
-<!--        </div>-->
-
-<!--        <button class="btn btn-primary mt-5">-->
-<!--            Search By Name Brand and Year-->
-<!--        </button>-->
-<!--    </form>-->
-<!--    <h6-->
-<!--            class="card-subtitle mb-2 text-muted"-->
-<!--            th:text="|USERNAME: ${username}|"-->
-<!--    />-->
-<!--    <div th:if="${username=='admin' or username=='warehouse'}">-->
-<!--        <a class="btn btn-primary mt-5" th:href="@{/input}">-->
-<!--            Add Items-->
-<!--        </a>-->
-<!--    </div>-->
-<!--    <div th:if="${username=='admin'}">-->
-<!--        <a class="btn btn-primary mt-5" th:href="@{/management}">-->
-<!--            Inventory Management Portal-->
-<!--        </a>-->
-<!--    </div>-->
-
     <ul class="pagination mt-5">
         <li class="page-item">
             <a class="page-link" th:href="@{/centersList/switchPage(pageToSwitch=${currentPage - 1})}">Previous</a>

@@ -27,4 +27,25 @@ public class Item {
     @ManyToOne
     @JoinColumn(name = "distribution_centre_id", nullable = false)
     private DistributionCentre distributionCentre;
+    private Brand brand;
+    @Getter
+    public enum Brand {
+        ARMANI("Armani"),
+        DOLCEGABBANA("Dolce&Gabbana"),
+        RALPHLAUREN("Ralph Lauren"),
+        CHANEL("Chanel"),
+        VERSACE("Versace"),
+        PRADA("Prada");
+
+        private String title;
+
+        private Brand(String title) {
+            this.title = title;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+    }
 }
